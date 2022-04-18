@@ -1,18 +1,16 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="ma-auto" style="border:1px solid red; width: 680px">
+    <h1>{{mensaje}}</h1>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+  data: () => ({
+    mensaje: "Home facebook clone"
+  }),
+};
 </script>
+
+<style lang="scss" scoped>
+</style>
