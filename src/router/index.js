@@ -11,10 +11,26 @@ const routes = [
     component: () => import(/* webpackChunkName: "home" */ "../views/Home.vue")
   },
   {
-    path: "/about",
-    name: "About",
-    component: () => import(/* webpackChunkName: "home" */ "../views/About.vue")
+    path: "/play",
+    name: "Play",
+    component: () => import(/* webpackChunkName: "home" */ "../views/Play.vue")
   },
+  {
+    path: "/store",
+    name: "Store",
+    component: () => import(/* webpackChunkName: "home" */ "../views/Store.vue")
+  },
+  {
+    path: "/groups",
+    name: "Groups",
+    component: () => import(/* webpackChunkName: "home" */ "../views/Groups.vue")
+  },
+  {
+    path: "/stream",
+    name: "Stream",
+    component: () => import(/* webpackChunkName: "home" */ "../views/Stream.vue")
+  },
+
 ]
 
 const router = new VueRouter({
