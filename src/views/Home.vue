@@ -127,40 +127,44 @@
         </v-btn>
       </div>
     </v-card>
-    <v-card elevation="1" class="mt-4 rounded-lg" height="63" width="auto">
-      <v-btn
-        style="border: 2px solid #e7f3ff"
-        rounded
-        class="text-capitalize mt-3 ml-4"
-        max-width="122"
-        min-height="40"
-        text
-      >
-        <v-img
-          style="
-            background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/ym/r/5zaboDASSye.png?_nc_eui2=AeHJ5KVaawPVpMreS1BHOFsHBQyVXafYdJoFDJVdp9h0mqjQJ2dK0ERCKvf2bttg1bHL7gNBZ53vcVG0QtbzPy0K');
-            background-position: 0 -219px;
-            background-size: auto;
-            width: 24px;
-            height: 24px;
-            background-repeat: no-repeat;
-            display: inline-block;
-          "
-        >
-        </v-img>
-        <span
-          class="ml-1"
-          style="
-            letter-spacing: 0px;
-            font-size: 14px !important;
-            color: #216fdb;
-          "
-          >Crear sala</span
-        >
-      </v-btn>
+    <v-card elevation="1" class="mt-7 rounded-lg" height="63" width="auto">
       <v-row justify="space-around">
         <v-col>
-          <v-slide-group style="width:610px; position:relative; left:120px;" class="my-n10" multiple show-arrows>
+          <v-slide-group
+            style="min-width: 750px; position: relative; right: 35px"
+            class=""
+            multiple
+          >
+            <v-btn
+              style="border: 2px solid #e7f3ff"
+              rounded
+              class="text-capitalize"
+              max-width="122"
+              min-height="40"
+              text
+            >
+              <v-img
+                style="
+                  background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/ym/r/5zaboDASSye.png?_nc_eui2=AeHJ5KVaawPVpMreS1BHOFsHBQyVXafYdJoFDJVdp9h0mqjQJ2dK0ERCKvf2bttg1bHL7gNBZ53vcVG0QtbzPy0K');
+                  background-position: 0 -219px;
+                  background-size: auto;
+                  width: 24px;
+                  height: 24px;
+                  background-repeat: no-repeat;
+                  display: inline-block;
+                "
+              >
+              </v-img>
+              <span
+                class="ml-2"
+                style="
+                  letter-spacing: 0px;
+                  font-size: 14px !important;
+                  color: #216fdb;
+                "
+                >Crear sala</span
+              >
+            </v-btn>
             <v-slide-item v-for="(item, i) in itemProfiles" :key="i">
               <v-badge
                 bordered
@@ -170,9 +174,28 @@
                 offset-x="10"
                 offset-y="10"
               >
-                <v-avatar class="ml-3" size="40">
-                  <v-img :src="item.img"> </v-img>
-                </v-avatar>
+                <v-tooltip
+                  transition="fade-transition"
+                  color="#1c1e21"
+                  open-delay="300"
+                  bottom
+                >
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-avatar
+                      style="cursor: pointer"
+                      v-bind="attrs"
+                      v-on="on"
+                      class="ml-4"
+                      size="40"
+                    >
+                      <v-img :src="item.img"> </v-img>
+                    </v-avatar>
+                  </template>
+                  <p style="color: #ecf3ff" class="font-weight-medium text-center ma-0">
+                    {{ item.name }}
+                  </p>
+                  <p class="caption text-center ma-0">Saludar</p>
+                </v-tooltip>
               </v-badge>
             </v-slide-item>
           </v-slide-group>
@@ -189,46 +212,57 @@ export default {
   data: () => ({
     itemProfiles: [
       {
-        img: "https://firebasestorage.googleapis.com/v0/b/facebook-clon-b088c.appspot.com/o/perfil-facebook.jpg?alt=media&token=0266aa15-b61d-436b-a601-39ece37bd830",
+        img: "https://firebasestorage.googleapis.com/v0/b/facebook-clon-b088c.appspot.com/o/facebook_2.jpg?alt=media&token=2a16f6ab-fbf8-4cca-846d-4dae218cbd3e",
+        name: "Kokoro Mistes",
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/facebook-clon-b088c.appspot.com/o/278397445_1849850121878334_2244041466133908538_n.jpg?alt=media&token=3585a5f5-2442-4609-b8e3-6256be3e7426",
+        name: "Odemaris Calix",
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/facebook-clon-b088c.appspot.com/o/278820736_1140165696527341_5324238490588925287_n.jpg?alt=media&token=448670ec-66fc-4a8d-acb2-c7e45b1ae3c3",
+        name: "Gisela Stinson",
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/facebook-clon-b088c.appspot.com/o/245486433_6257197817686621_1623074293267496790_n.jpg?alt=media&token=d5fd0bd9-add1-42b7-afc8-8294efc9bc7b",
+        name: "Juan José Urbina",
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/facebook-clon-b088c.appspot.com/o/278119291_5152087508240782_7200905247457025336_n.jpg?alt=media&token=68d95354-25c7-4d79-ad43-06e6ccfdf6cf",
+        name: "Adolfo Sánchez",
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/facebook-clon-b088c.appspot.com/o/277521164_1130807247703579_6181951581901105442_n.jpg?alt=media&token=ac5b9ad2-03e0-43df-8cdb-ea6ef35edb3d",
+        name: "Armany Nelux",
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/facebook-clon-b088c.appspot.com/o/275799285_1150970838988207_1472418445176810750_n.jpg?alt=media&token=99d20f33-a117-4ebf-95c0-e01cb0d675e5",
+        name: "Gustavo Castillo Nájera",
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/facebook-clon-b088c.appspot.com/o/258354472_1065022687676802_8616246552741338692_n.jpg?alt=media&token=eacf850d-ece3-4594-b296-35b605e68ba7",
+        name: "David Emmanuel Hernandez Ruiz",
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/facebook-clon-b088c.appspot.com/o/278629980_4957130017727393_2462347052825890467_n.jpg?alt=media&token=135bf500-1cde-4da4-a19a-83b956e8f6dc",
+        name: "PJ Fernando",
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/facebook-clon-b088c.appspot.com/o/275917400_10228171777104951_2664812130297100184_n.jpg?alt=media&token=9efd7d6a-0430-4e96-b504-62e03fa7e81a",
+        name: "Arturo Alegría Palacios",
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/facebook-clon-b088c.appspot.com/o/276231318_5034328829939725_5020955430085665183_n.jpg?alt=media&token=2e9dd7e1-1555-4feb-ac2a-101d84ec6be8",
+        name: "Eduardo Ernesto Ramírez",
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/facebook-clon-b088c.appspot.com/o/277672511_2548955355239020_2038173035834040252_n.jpg?alt=media&token=6cb498c4-042d-4963-ab60-3f208c6df359",
+        name: "Osy Cruz",
       },
       {
         img: "https://firebasestorage.googleapis.com/v0/b/facebook-clon-b088c.appspot.com/o/perfil-facebook.jpg?alt=media&token=0266aa15-b61d-436b-a601-39ece37bd830",
+        name: "Luis Angel Uscanga",
       },
-      
-     
     ],
   }),
 };

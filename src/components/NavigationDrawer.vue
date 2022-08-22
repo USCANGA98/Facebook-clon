@@ -32,7 +32,7 @@
     </v-navigation-drawer>
     <v-navigation-drawer
       floating
-      style="padding-top: 20px; background-color: #f0f2f5;"
+      style="padding-top: 20px; background-color: #f0f2f5"
       right
       absolute
       permanent
@@ -129,16 +129,16 @@ export default {
       ],
       itemsAdd: [
         {
-          text: "Compra, vende y recibe Bitcoins y otras criptomonedas fácilmente",
-          subtext: "bitso.com",
-          img: "https://scontent.fntr1-1.fna.fbcdn.net/v/t45.1600-4/264335224_23848865255240622_3335494175165959465_n.png?stp=cp0_dst-jpg_p296x100_q90_spS444&_nc_cat=109&ccb=1-5&_nc_sid=67cdda&_nc_eui2=AeGG3OmYsPyApcr_wpampq9MlFGd99rxnfuUUZ332vGd-574DhHHGYG6ZfHkBTE9OB7iXZ2V-DimuID0SijQ4_5S&_nc_ohc=6xwIswV-x10AX8tJRfb&_nc_ht=scontent.fntr1-1.fna&oh=00_AT_6_M-syIoIiFeNz5Ppa4U0C_0aSkSl8yrXauBSkLzx3Q&oe=626B23A5",
+          text: "KueskiPay",
+          subtext: "pcel.com",
+          img: "https://firebasestorage.googleapis.com/v0/b/facebook-clon-b088c.appspot.com/o/279772526_6278807224175_5579651573141261230_n.jpg?alt=media&token=443a374f-6549-4cd9-9505-b109484e1bf5",
           height: 69,
           width: 131,
         },
         {
-          text: "Ddtech",
-          subtext: "ddtech.mx",
-          img: "https://scontent.fntr1-1.fna.fbcdn.net/v/t45.1600-4/278457997_6287701558321_4721978922952536412_n.jpg?stp=cp0_dst-jpg_p960x960_q75_spS444&_nc_cat=1&ccb=1-5&_nc_sid=67cdda&_nc_eui2=AeEF8zVZtKs9CHqvN3vHe9RG-OeYncw7LHP455idzDssc75zkbh0t-y4Hibpv32rKGomAoMBHAWVDRhxlUi6615l&_nc_ohc=E6wFv7BdGUEAX9d_xgI&_nc_ht=scontent.fntr1-1.fna&oh=00_AT_lSCIRpLtpxgUA8i5Bj-RZIjQqjK2adciqFAD90z_P6w&oe=626B49AC",
+          text: "¡Bienvenido a nuestra familia KFC!",
+          subtext: "docs.goole.com",
+          img: "https://firebasestorage.googleapis.com/v0/b/facebook-clon-b088c.appspot.com/o/279642740_23850519388940714_6381962234598529323_n.jpg?alt=media&token=79877d6c-68f5-4f59-b65e-b7cb4128b095",
           height: 131,
           width: 131,
         },

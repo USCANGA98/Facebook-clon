@@ -189,11 +189,12 @@
         </v-card>
       </v-menu>
       <v-menu
-        rounded="xl"
+        rounded="lg"
         :close-on-content-click="false"
         transition="no"
-        min-width="280"
+        max-width="360"
         offset-y
+        position-y="10"
         left
       >
         <template v-slot:activator="{ on: menu }">
@@ -208,22 +209,49 @@
           </v-btn>
         </template>
 
-        <v-card class="pb-2" flat>
-          <div class="caption pl-5 pt-4 pb-0">Cuentas</div>
-          <v-list dense class="ml-2 mr-2 pt-0 pb-0">
-            <v-list-item v-for="item in items2" :key="item.title" link exact>
-              <div class="font-weight-black">{{ item.title }}</div>
-            </v-list-item>
-          </v-list>
-          <div class="caption pl-5 pt-4 pb-0">Más opciones</div>
-          <v-list dense class="ml-2 mr-2 pt-0 pb-0">
-            <v-list-item v-for="item in items3" :key="item.title" link exact>
-              <div class="font-weight-black">{{ item.title }}</div>
-              <v-spacer />
-              <v-icon color="black">{{ item.icon }}</v-icon>
-            </v-list-item>
-          </v-list>
-        </v-card>
+        <v-list dense nav class="mx-n1">
+          <v-list-item class="pa-2" link>
+            <v-avatar class="mt-1 ml-1" size="60">
+              <v-img src="../assets/perfil-facebook.jpg" />
+            </v-avatar>
+            <v-list-item-content class="mx-3">
+              <v-list-item-title
+                style="font-size: 15px; letter-spacing: 0.5px"
+                class="font-weight-medium"
+              >
+                Luis Angel Uscanga
+              </v-list-item-title>
+              <v-list-item-subtitle
+                style="font-size: 13px !important; letter-spacing: 0.5px"
+                class="caption"
+              >
+                Ver tu perfil
+              </v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+        <v-divider class="mt-n1 ml-4 mr-4"></v-divider>
+        <v-list dense nav class="mx-n1">
+          <v-list-item class="pa-2" link>
+            <v-avatar color="#e4e6eb" class="ml-1" size="35">
+              <v-icon color="black">mdi-message-alert</v-icon>
+            </v-avatar>
+            <v-list-item-content class="mx-3">
+              <v-list-item-title
+                style="font-size: 13px; letter-spacing: 0.5px"
+                class="font-weight-bold ma-0"
+              >
+                Enviar comentarios
+              </v-list-item-title>
+              <v-list-item-subtitle
+                style="font-size: 12px !important; letter-spacing: 0.5px"
+                class="caption font-weight-normal ma-0"
+              >
+                Ayúdanos a mejorar Facebook
+              </v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
       </v-menu>
     </v-app-bar>
     <NavigationDrawer />
